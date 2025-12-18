@@ -1,5 +1,4 @@
-// File: GeometricObject.java (обновленная версия)
-public abstract class GeometricObject implements Comparable<GeometricObject> {
+public abstract class GeometricObject {
     private String color = "белый";
     private boolean filled;
     private java.util.Date dateCreated;
@@ -54,15 +53,9 @@ public abstract class GeometricObject implements Comparable<GeometricObject> {
     /** Абстрактный метод для получения периметра */
     public abstract double getPerimeter();
 
-    /** Реализация интерфейса Comparable */
-    @Override
-    public int compareTo(GeometricObject o) {
-        return Double.compare(this.getArea(), o.getArea());
-    }
-
     /** Статический метод для поиска наибольшего объекта */
     public static GeometricObject max(GeometricObject o1, GeometricObject o2) {
-        if (o1.compareTo(o2) > 0) {
+        if (o1.getArea() > o2.getArea()) {
             return o1;
         } else {
             return o2;
