@@ -1,7 +1,5 @@
-// File: TestColorable.java (для задания 4)
 public class TestColorable {
     public static void main(String[] args) {
-        // Создание массива из 5 GeometricObject
         GeometricObject[] shapes = new GeometricObject[5];
 
         try {
@@ -11,7 +9,6 @@ public class TestColorable {
             shapes[3] = new Triangle(3, 4, 5, "желтый", false);
             shapes[4] = new Square(4, "фиолетовый", true);
 
-            // Обработка каждого объекта
             for (int i = 0; i < shapes.length; i++) {
                 System.out.println("\n=== Объект " + (i + 1) + " ===");
                 System.out.println("Тип: " + shapes[i].getClass().getSimpleName());
@@ -19,7 +16,6 @@ public class TestColorable {
                 System.out.println("Цвет: " + shapes[i].getColor());
                 System.out.println("Закрашен: " + shapes[i].isFilled());
 
-                // Проверка, реализует ли объект интерфейс Colorable
                 if (shapes[i] instanceof Colorable) {
                     System.out.print("Инструкция по раскрашиванию: ");
                     ((Colorable) shapes[i]).howToColor();

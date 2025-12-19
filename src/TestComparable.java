@@ -1,7 +1,6 @@
 public class TestComparable {
     public static void main(String[] args) {
         try {
-            // Создание треугольников
             Triangle triangle1 = new Triangle(3, 4, 5, "красный", true);
             Triangle triangle2 = new Triangle(5, 12, 13, "синий", false);
 
@@ -12,7 +11,6 @@ public class TestComparable {
             GeometricObject maxTriangle = GeometricObject.max(triangle1, triangle2);
             System.out.println(maxTriangle);
 
-            // Создание кругов
             Circle circle1 = new Circle(5, "зеленый", true);
             Circle circle2 = new Circle(7, "желтый", false);
 
@@ -23,7 +21,6 @@ public class TestComparable {
             GeometricObject maxCircle = GeometricObject.max(circle1, circle2);
             System.out.println(maxCircle);
 
-            // Создание прямоугольников
             Rectangle rectangle1 = new Rectangle(4, 6, "оранжевый", true);
             Rectangle rectangle2 = new Rectangle(3, 8, "фиолетовый", false);
 
@@ -34,7 +31,6 @@ public class TestComparable {
             GeometricObject maxRectangle = GeometricObject.max(rectangle1, rectangle2);
             System.out.println(maxRectangle);
 
-            // Использование ComparableCircle
             ComparableCircle compCircle1 = new ComparableCircle(5, "красный", true);
             ComparableCircle compCircle2 = new ComparableCircle(8, "синий", false);
 
@@ -64,7 +60,6 @@ public class TestComparable {
                 System.out.println("Круги равны по площади");
             }
 
-            // Сравнение круга и прямоугольника
             System.out.println("\n=== Сравнение круга и прямоугольника (по площади) ===");
             System.out.println("Круг площадь: " + compCircle1.getArea());
             System.out.println("Прямоугольник площадь: " + rectangle1.getArea());

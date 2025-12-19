@@ -1,4 +1,3 @@
-// File: TestTriangle.java (для заданий 1 и 2)
 import java.util.Scanner;
 
 public class TestTriangle {

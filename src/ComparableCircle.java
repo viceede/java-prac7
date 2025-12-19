@@ -14,11 +14,9 @@ public class ComparableCircle extends Circle implements Comparable<ComparableCir
 
     @Override
     public int compareTo(ComparableCircle o) {
-        // Сравниваем по радиусу
         return Double.compare(this.getRadius(), o.getRadius());
     }
 
-    // Метод для сравнения по площади (альтернативный вариант)
     public int compareByArea(ComparableCircle o) {
         return Double.compare(this.getArea(), o.getArea());
     }
